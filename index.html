@@ -336,16 +336,21 @@
         >
           <div class="grid lg:grid-cols-2">
             <!-- Image -->
-            <div>
-              <img
-                src="./assets/images/projects/skyline.png"
-                alt="Skyline Project"
-                class="w-full object-contain"
-              />
+            <div class="overflow-hidden">
+              <a
+                href="https://skyline-construction-website.vercel.app/"
+                target="_blank"
+              >
+                <img
+                  src="./assets/images/projects/skyline.png"
+                  alt="Skyline Project"
+                  class="w-full h-full object-cover hover:scale-105 transition duration-500"
+                />
+              </a>
             </div>
 
             <!-- Content -->
-            <div class="p-10">
+            <div class="p-10 flex flex-col justify-center">
               <p class="text-orange-500 mb-3">Featured Project</p>
 
               <h3 class="text-3xl font-bold mb-5 font-['Space_Grotesk']">
@@ -355,8 +360,8 @@
               <p class="text-slate-400 leading-8 mb-8">
                 A modern construction and real estate company website built with
                 HTML, TailwindCSS and JavaScript. The project focuses on clean
-                UI design, responsive layouts and a professional user
-                experience.
+                UI design, responsive layouts, smooth interactions and a
+                professional user experience.
               </p>
 
               <!-- Tech Stack -->
@@ -374,14 +379,24 @@
                 </span>
               </div>
 
-              <!-- GitHub Button -->
-              <a
-                href="https://github.com/ismacil-cisa/skyline-construction-website"
-                target="_blank"
-                class="inline-block bg-orange-500 px-6 py-3 rounded-full hover:bg-orange-600 transition"
-              >
-                View Code
-              </a>
+              <!-- Buttons -->
+              <div class="flex flex-wrap gap-4">
+                <a
+                  href="https://skyline-construction-website.vercel.app/"
+                  target="_blank"
+                  class="bg-orange-500 px-6 py-3 rounded-full hover:bg-orange-600 transition"
+                >
+                  Live Demo
+                </a>
+
+                <a
+                  href="https://github.com/ismacil-cisa/skyline-construction-website"
+                  target="_blank"
+                  class="border border-slate-700 px-6 py-3 rounded-full hover:bg-slate-800 transition"
+                >
+                  GitHub
+                </a>
+              </div>
             </div>
           </div>
         </div>
