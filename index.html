@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Ismail's Portfolio</title>
+  </head>
+  <body class="bg-slate-950 text-white overflow-x-hidden">
+    <!-- Loading Screen -->
+    <div
+      id="loader"
+      class="fixed inset-0 bg-slate-950 flex items-center justify-center z-[9999]"
+    >
+      <div class="text-center">
+        <h1 class="text-4xl font-bold">
+          <span class="text-orange-500">⚡</span>
+          Ismail.
+        </h1>
+
+        <p class="text-slate-400 mt-4">Loading Portfolio...</p>
+      </div>
+    </div>
+    <!-- Custom Cursor -->
+    <div
+      id="cursor"
+      class="fixed w-6 h-6 rounded-full border-2 border-orange-500 pointer-events-none z-[99999] -translate-x-1/2 -translate-y-1/2"
+    ></div>
+    <!-- Mouse Glow -->
+    <div
+      id="mouse-glow"
+      class="fixed w-80 h-80 rounded-full bg-orange-500/10 blur-3xl pointer-events-none z-0"
+    ></div>
+    <!-- Navbar Glass Container -->
+    <nav class="fixed top-5 left-0 w-full z-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="flex items-center justify-between bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-full px-8 py-4"
+        >
+          <a href="#" class="text-2xl font-bold tracking-wide">
+            <span class="text-orange-500">⚡</span>
+            Ismail.
+          </a>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#home" class="nav-link hover:text-orange-500 transition">
+              Home
+            </a>
+
+            <a href="#about" class="nav-link hover:text-orange-500 transition">
+              About
+            </a>
+
+            <a
+              href="#projects"
+              class="nav-link hover:text-orange-500 transition"
+            >
+              Projects
+            </a>
+            <a href="#skills" class="nav-link hover:text-orange-500 transition">
+              Skills
+            </a>
+
+            <a
+              href="#contact"
+              class="nav-link hover:text-orange-500 transition"
+            >
+              Contact
+            </a>
+          </div>
+
+          <a
+            href="#contact"
+            class="hidden md:block bg-orange-500 px-5 py-3 rounded-full hover:bg-orange-600 transition"
+          >
+            Let's Talk
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      id="cursor-glow"
+      class="fixed w-96 h-96 rounded-full pointer-events-none blur-3xl opacity-20 z-0"
+    ></div>
+
+    <!-- Section: Hero -->
+    <header
+      id="home"
+      class="min-h-screen flex items-center relative overflow-hidden"
+    >
+      <div class="absolute inset-0 opacity-5">
+        <div
+          class="w-full h-full"
+          style="
+            background-image:
+              linear-gradient(to right, #ffffff 1px, transparent 1px),
+              linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+            background-size: 50px 50px;
+          "
+        ></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 w-full relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Left Content -->
+          <div>
+            <p
+              class="text-orange-500 uppercase tracking-[0.3em] font-medium mb-6"
+            >
+              Frontend Developer & AI Engineering Student
+            </p>
+
+            <h1
+              class="text-5xl md:text-7xl font-bold leading-tight font-['Space_Grotesk']"
+            >
+              Hello, I'am
+              <span
+                class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500"
+                >Ismail</span
+              >
+            </h1>
+
+            <p
+              id="typing-text"
+              class="text-slate-400 text-lg mt-8 max-w-2xl leading-8"
+            >
+              I build modern web experiences, learn emerging technologies, and
+              explore the future of Artificial Intelligence and Robotics.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-5 mt-10">
+              <a
+                href="#projects"
+                class="bg-orange-500 px-7 py-4 rounded-full hover:bg-orange-600 transition text-center"
+              >
+                View Projects
+              </a>
+
+              <a
+                href="#contact"
+                class="border border-slate-700 px-7 py-4 rounded-full hover:bg-slate-900 transition text-center"
+              >
+                Contact Me
+              </a>
+            </div>
+            <div class="flex gap-6 mt-10 text-slate-400">
+              <a
+                href="https://github.com/ismacil-cisa"
+                target="_blank"
+                class="hover:text-orange-400 transition text-6xl"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+
+              <a
+                href="mailto:ismacil.cissa@gmail.com"
+                class="hover:text-orange-500 transition text-6xl"
+              >
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Content -->
+          <div
+            class="relative h-[400px] lg:h-[500px] flex items-center justify-center"
+          >
+            <div
+              class="absolute w-80 h-80 rounded-full bg-blue-500/20 blur-3xl"
+            ></div>
+            <div
+              class="absolute w-64 h-64 rounded-full bg-purple-500/20 blur-3xl -bottom-10 right-10"
+            ></div>
+            <div
+              class="relative bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-10 w-[380px] floating"
+            >
+              <p class="text-orange-500 uppercase tracking-widest text-sm">
+                Tech Stack
+              </p>
+
+              <div class="mt-8 space-y-5">
+                <div class="bg-slate-800/50 rounded-2xl px-6 py-4">HTML5</div>
+
+                <div class="bg-slate-800/50 rounded-2xl px-6 py-4">CSS3</div>
+
+                <div class="bg-slate-800/50 rounded-2xl px-6 py-4">
+                  TailwindCSS
+                </div>
+
+                <div class="bg-slate-800/50 rounded-2xl px-6 py-4 my-6">
+                  JavaScript
+                </div>
+                <div
+                  class="absolute -top-6 -right-6 bg-slate-900/80 backdrop-blur-xl border border-slate-800 rounded-2xl px-6 py-4 floating"
+                >
+                  ⚡ AI Enthusiast
+                </div>
+                <div
+                  class="absolute -bottom-8 -left-6 bg-slate-900/80 backdrop-blur-xl border border-slate-800 rounded-2xl px-6 py-4 floating"
+                >
+                  🚀 Building Projects
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 relative hidden-section">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+          <!-- Left -->
+          <div>
+            <p
+              class="text-orange-500 uppercase tracking-[0.3em] font-medium mb-6"
+            >
+              About Me
+            </p>
+
+            <h2
+              class="text-4xl md:text-6xl font-bold leading-tight font-['Space_Grotesk']"
+            >
+              Passionate About Technology & Innovation
+            </h2>
+
+            <p class="text-slate-400 text-lg mt-8 leading-8 max-w-xl">
+              I am a student and aspiring developer who enjoys building modern
+              web applications, exploring artificial intelligence, and learning
+              emerging technologies that shape the future.
+            </p>
+
+            <div class="flex flex-wrap gap-5 mt-10">
+              <a
+                href="#projects"
+                class="bg-orange-500 px-7 py-4 rounded-full hover:bg-orange-600 transition"
+              >
+                View Projects
+              </a>
+
+              <a
+                href="#contact"
+                class="border border-slate-700 px-7 py-4 rounded-full hover:bg-slate-900 transition"
+              >
+                Contact Me
+              </a>
+            </div>
+          </div>
+
+          <!-- Right -->
+          <div class="grid grid-cols-2 gap-6">
+            <div
+              class="bg-slate-900/40 mt-10 backdrop-blur-xl border border-slate-800 rounded-3xl p-6 hover:-translate-y-2 transition"
+            >
+              <h3 class="text-3xl mb-3">🎓</h3>
+
+              <h4 class="font-semibold text-lg">Student</h4>
+
+              <p class="text-slate-400 mt-2">
+                Always learning and improving my skills.
+              </p>
+            </div>
+            <div
+              class="bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-6 hover:-translate-y-2 transition"
+            >
+              <h3 class="text-3xl mb-3">🤖</h3>
+
+              <h4 class="font-semibold text-lg">AI Enthusiast</h4>
+
+              <p class="text-slate-400 mt-2">
+                Exploring artificial intelligence and robotics.
+              </p>
+            </div>
+            <div
+              class="bg-slate-900/40 mt-10 backdrop-blur-xl border border-slate-800 rounded-3xl p-6 hover:-translate-y-2 transition"
+            >
+              <h3 class="text-3xl mb-3">💻</h3>
+
+              <h4 class="font-semibold text-lg">Frontend Builder</h4>
+
+              <p class="text-slate-400 mt-2">
+                Creating modern and responsive web experiences.
+              </p>
+            </div>
+            <div
+              class="bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-6 hover:-translate-y-2 transition"
+            >
+              <h3 class="text-3xl mb-3">🚀</h3>
+
+              <h4 class="font-semibold text-lg">Future AI Engineer</h4>
+
+              <p class="text-slate-400 mt-2">
+                Working toward advanced technology projects.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-32 hidden-section">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Section Heading -->
+        <div class="text-center mb-20">
+          <p
+            class="text-orange-500 uppercase tracking-[0.3em] font-medium mb-4"
+          >
+            Featured Projects
+          </p>
+
+          <h2 class="text-4xl md:text-6xl font-bold font-['Space_Grotesk']">
+            Things I've Built
+          </h2>
+        </div>
+
+        <!-- Featured Project -->
+        <div
+          class="bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl overflow-hidden mb-10"
+        >
+          <div class="grid lg:grid-cols-2">
+            <!-- Image -->
+            <div>
+              <img
+                src="./assets/images/projects/skyline.png"
+                alt="Skyline Project"
+                class="w-full h-[400px] object-cover"
+              />
+            </div>
+
+            <!-- Content -->
+            <div class="p-10">
+              <p class="text-orange-500 mb-3">Featured Project</p>
+
+              <h3 class="text-3xl font-bold mb-5 font-['Space_Grotesk']">
+                Skyline Construction
+              </h3>
+
+              <p class="text-slate-400 leading-8 mb-8">
+                A modern construction and real estate company website built with
+                HTML, TailwindCSS and JavaScript. The project focuses on clean
+                UI design, responsive layouts and a professional user
+                experience.
+              </p>
+
+              <!-- Tech Stack -->
+              <div class="flex flex-wrap gap-3 mb-8">
+                <span class="bg-slate-800 px-4 py-2 rounded-full text-sm">
+                  HTML
+                </span>
+
+                <span class="bg-slate-800 px-4 py-2 rounded-full text-sm">
+                  TailwindCSS
+                </span>
+
+                <span class="bg-slate-800 px-4 py-2 rounded-full text-sm">
+                  JavaScript
+                </span>
+              </div>
+
+              <!-- GitHub Button -->
+              <a
+                href="https://github.com/ismacil-cisa/skyline-construction-website"
+                target="_blank"
+                class="inline-block bg-orange-500 px-6 py-3 rounded-full hover:bg-orange-600 transition"
+              >
+                View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coming Soon Projects -->
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-10 text-center hover:-translate-y-2 transition duration-300"
+          >
+            <h3 class="text-2xl mb-4">🚀 Coming Soon</h3>
+
+            <p class="text-slate-400">
+              More exciting projects are currently in development.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-10 text-center hover:-translate-y-2 transition duration-300"
+          >
+            <h3 class="text-2xl mb-4">🚀 Coming Soon</h3>
+
+            <p class="text-slate-400">
+              New portfolio projects will be added soon.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-32 hidden-section">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+          <!-- Left -->
+          <div>
+            <p
+              class="text-orange-500 uppercase tracking-[0.3em] font-medium mb-4"
+            >
+              Skills & Tools
+            </p>
+            <h2
+              class="text-4xl md:text-6xl font-bold font-['Space_Grotesk'] mb-8"
+            >
+              Technologies I Use
+            </h2>
+
+            <p class="text-slate-400 leading-8 mb-10 max-w-xl">
+              I enjoy building modern websites, learning new technologies and
+              improving my frontend development skills every day.
+            </p>
+            <div class="mb-6">
+              <div class="flex justify-between mb-2">
+                <span>HTML5</span>
+
+                <span>85%</span>
+              </div>
+
+              <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
+                <div
+                  class="progress-bar h-full bg-orange-500"
+                  data-width="85%"
+                ></div>
+              </div>
+            </div>
+            <div class="mb-6">
+              <div class="flex justify-between mb-2">
+                <span>CSS3</span>
+
+                <span>65%</span>
+              </div>
+
+              <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
+                <div
+                  class="progress-bar h-full bg-orange-500"
+                  data-width="65%"
+                ></div>
+              </div>
+            </div>
+            <div class="mb-6">
+              <div class="flex justify-between mb-2">
+                <span>Tailwind CSS</span>
+
+                <span>75%</span>
+              </div>
+
+              <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
+                <div
+                  class="progress-bar h-full bg-orange-500"
+                  data-width="75%"
+                ></div>
+              </div>
+            </div>
+            <div class="mb-6">
+              <div class="flex justify-between mb-2">
+                <span>JavaScript</span>
+
+                <span>55%</span>
+              </div>
+
+              <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
+                <div
+                  class="progress-bar h-full bg-orange-500"
+                  data-width="55%"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right -->
+          <div class="relative">
+            <!-- Glow Effect -->
+            <div class="absolute inset-0 bg-orange-500/10 blur-3xl -z-10"></div>
+
+            <!-- Grid Cards -->
+            <div class="relative grid grid-cols-2 gap-6">
+              <!-- Card 1 -->
+              <div
+                class="bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 text-center hover:-translate-y-2 hover:border-orange-500/50 transition duration-300"
+              >
+                <h3 class="text-5xl mb-4">🌐</h3>
+
+                <h4 class="font-semibold text-xl">HTML5</h4>
+
+                <p class="text-slate-400 mt-2 text-sm">
+                  Structure & Semantic Web
+                </p>
+              </div>
+
+              <!-- Card 2 -->
+              <div
+                class="bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 text-center hover:-translate-y-2 hover:border-blue-500/50 transition duration-300"
+              >
+                <h3 class="text-5xl mb-4">🎨</h3>
+
+                <h4 class="font-semibold text-xl">CSS3</h4>
+
+                <p class="text-slate-400 mt-2 text-sm">
+                  Styling & Responsive Design
+                </p>
+              </div>
+
+              <!-- Card 3 -->
+              <div
+                class="bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 text-center hover:-translate-y-2 hover:border-green-500/50 transition duration-300"
+              >
+                <h3 class="text-5xl mb-4">⚡</h3>
+
+                <h4 class="font-semibold text-xl">Tailwind CSS</h4>
+
+                <p class="text-slate-400 mt-2 text-sm">
+                  Utility-first CSS Framework
+                </p>
+              </div>
+
+              <!-- Card 4 -->
+              <div
+                class="bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 text-center hover:-translate-y-2 hover:border-yellow-500/50 transition duration-300"
+              >
+                <h3 class="text-5xl mb-4">🚀</h3>
+
+                <h4 class="font-semibold text-xl">JavaScript</h4>
+
+                <p class="text-slate-400 mt-2 text-sm">
+                  Interactive Web Development
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section ⭐ -->
+    <section id="journey" class="py-32 hidden-section">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+          <!-- Left -->
+          <div>
+            <p
+              class="text-orange-500 uppercase tracking-[0.3em] font-medium mb-4"
+            >
+              My Journey
+            </p>
+
+            <h2
+              class="text-4xl md:text-6xl font-bold font-['Space_Grotesk'] mb-8"
+            >
+              Learning & Building
+            </h2>
+
+            <p class="text-slate-400 leading-8 max-w-xl">
+              My journey in technology started with curiosity and continues
+              through web development, artificial intelligence, and future
+              robotics projects.
+            </p>
+          </div>
+
+          <!-- Right -->
+          <!-- Card 1 -->
+          <div>
+            <div class="relative pl-10 pb-10 border-l border-slate-800">
+              <div
+                class="absolute left-[-8px] top-0 w-4 h-4 rounded-full bg-orange-500"
+              ></div>
+
+              <span class="text-orange-500 font-semibold"> 2025 </span>
+
+              <h3 class="text-xl font-bold mt-2">Started Web Development</h3>
+
+              <p class="text-slate-400 mt-3 leading-7">
+                Began learning HTML, CSS and modern web technologies.
+              </p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="relative pl-10 pb-10 border-l border-slate-800">
+            <div
+              class="absolute left-[-8px] top-0 w-4 h-4 rounded-full bg-orange-500"
+            ></div>
+
+            <span class="text-orange-500 font-semibold"> 2026 </span>
+
+            <h3 class="text-xl font-bold mt-2">Built Real Projects</h3>
+
+            <p class="text-slate-400 mt-3 leading-7">
+              Created Skyline Construction and started building portfolio
+              projects.
+            </p>
+          </div>
+          <!-- card 3 -->
+          <div class="relative pl-10 pb-10 border-l border-slate-800">
+            <div
+              class="absolute left-[-8px] top-0 w-4 h-4 rounded-full bg-orange-500"
+            ></div>
+
+            <span class="text-orange-500 font-semibold"> 2026 </span>
+
+            <h3 class="text-xl font-bold mt-2">AI Engineering Student</h3>
+
+            <p class="text-slate-400 mt-3 leading-7">
+              Studying Artificial Intelligence Engineering while improving
+              frontend development skills.
+            </p>
+          </div>
+          <!-- card 4 -->
+          <div class="relative pl-10">
+            <div
+              class="absolute left-[-8px] top-0 w-4 h-4 rounded-full bg-orange-500"
+            ></div>
+
+            <span class="text-orange-500 font-semibold"> Future </span>
+
+            <h3 class="text-xl font-bold mt-2">AI & Robotics Solutions</h3>
+
+            <p class="text-slate-400 mt-3 leading-7">
+              Building innovative solutions powered by artificial intelligence
+              and robotics.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section (Premium CTA) -->
+    <section id="contact" class="py-32 hidden-section">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <!-- Section Label -->
+        <p class="text-orange-500 uppercase tracking-[0.3em] font-medium mb-4">
+          Contact
+        </p>
+
+        <!-- Heading -->
+        <h2 class="text-4xl md:text-6xl font-bold font-['Space_Grotesk'] mb-8">
+          Let's Build Something Amazing Together
+        </h2>
+
+        <!-- Description -->
+        <p class="text-slate-400 leading-8 max-w-2xl mx-auto mb-12">
+          Whether it's web development, artificial intelligence, or future
+          technology projects, I'm always open to learning, collaboration and
+          exciting opportunities.
+        </p>
+
+        <!-- Main CTA Button -->
+        <a
+          href="mailto:ismacil.cissa@gmail.com"
+          class="inline-block bg-orange-500 px-8 py-4 rounded-full hover:bg-orange-600 transition duration-300 mb-12"
+        >
+          Email Me
+        </a>
+
+        <!-- Social Cards -->
+        <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <!-- GitHub -->
+          <a
+            href="https://github.com/ismacil-cisa"
+            target="_blank"
+            class="bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 hover:-translate-y-2 hover:border-orange-500/50 transition duration-300 block"
+          >
+            <h3 class="text-2xl font-semibold mb-3">GitHub</h3>
+
+            <p class="text-slate-400">
+              Explore my projects, source code and development journey.
+            </p>
+          </a>
+
+          <!-- Email -->
+          <a
+            href="mailto:ismacil.cissa@gmail.com"
+            class="bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 hover:-translate-y-2 hover:border-orange-500/50 transition duration-300 block"
+          >
+            <h3 class="text-2xl font-semibold mb-3">Email</h3>
+
+            <p class="text-slate-400">
+              Reach out for collaboration, freelance work or networking.
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 py-10 hidden-section">
+      <div
+        class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6"
+      >
+        <!-- Logo -->
+        <div class="text-2xl font-bold">
+          <span class="text-orange-500">⚡</span>
+          Ismail.
+        </div>
+
+        <!-- Navigation -->
+        <div class="flex flex-wrap justify-center gap-6 text-slate-400">
+          <a href="#home" class="hover:text-orange-500 transition">Home</a>
+
+          <a href="#about" class="hover:text-orange-500 transition">About</a>
+
+          <a href="#projects" class="hover:text-orange-500 transition"
+            >Projects</a
+          >
+
+          <a href="#skills" class="hover:text-orange-500 transition">Skills</a>
+
+          <a href="#contact" class="hover:text-orange-500 transition"
+            >Contact</a
+          >
+        </div>
+
+        <!-- Copyright -->
+        <p class="text-slate-500 text-sm">
+          © 2026 Ismail. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
